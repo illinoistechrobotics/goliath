@@ -196,7 +196,7 @@ void slow_loop() {
   //compressor_ctl();
 } 
 
-void tank_drive() { // not actually tank drive
+void tank_drive() { // not actually tank drive anymore
   int power_out = 0;
   int turn_out  = 0;
   int zeroed_power =    ((int)(astate->stickX) - 127);
@@ -217,8 +217,8 @@ void tank_drive() { // not actually tank drive
     }
   }
   // Turn power scaling here
-  int left_out =     power_out + (turn_out / 8);
-  int right_out = -1 * power_out + (turn_out / 8);
+  int left_out =     power_out + (turn_out / 6);
+  int right_out = -1 * power_out + (turn_out / 6);
   
  // System reset logic
  // Set fastest watchdog timeout and spin forever
@@ -247,8 +247,8 @@ void tank_drive() { // not actually tank drive
       //PID can engage
       // Setpoints are in terms of motor shaft RPM, max 4800RPM (note 8.3:1 speed reducer)
       // 8 is probably OK
-      leftSet = -3*(power_out+turn_out);
-      rightSet = -3*(power_out-turn_out);
+      leftSet = -4*(power_out+turn_out);
+      rightSet = -4*(power_out-turn_out);
       leftPID.SetMode(AUTOMATIC);
       rightPID.SetMode(AUTOMATIC);
       /* Allow PID to stay engaged */
