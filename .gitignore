@@ -30,3 +30,4 @@
 *.hex
 main
 serialctl-app
+serialctl

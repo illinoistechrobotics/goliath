@@ -1,0 +1,3 @@
+[submodule "arduino/serialctl/lib/Arduino-PID-Library-V2"]
+	url = https://github.com/illinoistechrobotics/Arduino-PID-Library-V2
+	path = arduino/serialctl/lib/Arduino-PID-Library-V2
