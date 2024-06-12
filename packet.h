@@ -15,4 +15,6 @@ uint8_t stickY;
 uint8_t btnhi;
 uint8_t btnlo;
 uint16_t cksum;
+uint8_t stickRX; // add right stick, without changieng existing var names or ordering
+uint8_t stickRY; 
 } packet_t;

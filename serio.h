@@ -8,7 +8,7 @@
 #undef DEBUG
 #endif
 
-#define RECVBUF 256
+#define RECVBUF 512
 typedef struct{
         int fd;
         struct termios spconfig;

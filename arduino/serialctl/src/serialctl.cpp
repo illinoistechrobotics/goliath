@@ -96,6 +96,8 @@ void setup() {
   DEBUGPRINT("Initializing drive PID subsystem...");
   PIDInit(); //Initialize PID subsystem
   DEBUGPRINT("Initializing RC communication subsystems...");
+  Serial1.setRX(17);
+  Serial1.setTX(16);
   SerComm.begin(57600);
   comm_init(); //Initialize the communication FSM
   //DEBUGPRINT("Initializing sequencing game...");
